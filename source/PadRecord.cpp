@@ -1,10 +1,12 @@
-#include "sample/PadRecord.h"
+#include "PadRecord.h"
+#include "Game/System/GameSystem.h"
 #include "Game/System/GameSequenceInGame.h"
 #include "Game/System/PlayResultInStageHolder.h"
 #include "Game/System/AllData/GameSequenceFunction.h"
 #include "Game/System/AllData/SaveDataHandler.h"
 #include "Game/System/AllData/SaveDataHandleSequence.h"
 #include "Game/Util.h"
+#include "Game/Singleton.h"
 #include "kamek/hooks.h"
 
 /*

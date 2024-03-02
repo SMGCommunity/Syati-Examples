@@ -1,4 +1,4 @@
-#include "sample/GstRecord.h"
+#include "GstRecord.h"
 #include "Game/NameObj/NameObjCategories.h"
 #include "Game/System/AllData/GameSequenceFunction.h"
 #include "Game/Player/MarioAccess.h"

@@ -1,7 +1,7 @@
 #include "revolution.h"
 #include "kamek/hooks.h"
-#include "sample/GstRecord.h"
-#include "sample/PadRecord.h"
+#include "GstRecord.h"
+#include "PadRecord.h"
 
 typedef void (*Func)();
 extern Func __ctor_loc;
