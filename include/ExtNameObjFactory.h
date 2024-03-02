@@ -3,9 +3,9 @@
 #include "revolution.h"
 #include "Game/AreaObj/AreaObj.h"
 #include "Game/NameObj/NameObjFactory.h"
-#include "sample/SampleActor.h"
-#include "sample/PadRecord.h"
-#include "sample/GstRecord.h"
+#include "SampleActor.h"
+#include "PadRecord.h"
+#include "GstRecord.h"
 
 /*
 * Expands the NameObjFactory to take into account our custom actors. You can freely extend the creation table below by

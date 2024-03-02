@@ -1,5 +1,5 @@
 #include "syati.h"
-#include "sample/archive.h"
+#include "archive.h"
 
 namespace syati {
     JKRArchive* loadArchive(const char *pArchivePath) {

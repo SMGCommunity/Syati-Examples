@@ -1,7 +1,7 @@
 ﻿#include "revolution.h"
 #include "kamek/hooks.h"
 #include "Game/Util/StringUtil.h"
-#include "sample/ExtNameObjFactory.h"
+#include "ExtNameObjFactory.h"
 
 /*
 * Extends the existing NameObjFactory by taking into account our table of new objects. The custom creation table is
