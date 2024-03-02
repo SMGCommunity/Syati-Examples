@@ -1,4 +1,4 @@
-#include "sample/SampleActor.h"
+#include "SampleActor.h"
 #include "Game/Util.h"
 
 /*
