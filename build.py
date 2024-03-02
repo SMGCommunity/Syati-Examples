@@ -9,6 +9,9 @@ def err(message: str):
     print(f"Error: {message}")
     sys.exit(1)
 
+def removeDFiles():
+    for f in glob.glob("*.d"):
+        os.remove(f)
 
 # Get the target region from the command line
 if len(sys.argv) < 2:
@@ -97,6 +100,7 @@ for task in tasks:
     print(f"Compiling {source_path}...")
 
     if subprocess.call(f"{command} {build_path} {source_path}", shell=True) != 0:
+        removeDFiles()
         err("Compiler error.")
 
 for a_task in asm_tasks:
@@ -105,6 +109,7 @@ for a_task in asm_tasks:
     print(f"Assembling {source_path}...")
 
     if subprocess.call(f"{asm_cmd} {build_path} {source_path}", shell=True) != 0:
+        removeDFiles()
         err("Assembler error.")
 
 # Link all object files and create the CustomCode binary
@@ -116,10 +121,10 @@ asm_obj_files = " ".join([a_task[1] for a_task in asm_tasks])
 kamek_cmd = f"deps\Kamek\Kamek.exe {object_files} {asm_obj_files} -externals=Syati/symbols/{region}.txt -output-kamek=CustomCode_{region}.bin"
 
 if subprocess.call(kamek_cmd, shell=True) != 0:
+    removeDFiles()
     err("Linking failed.")
 
 # Remove all useless "d" files
-for f in glob.glob("*.d"):
-    os.remove(f)
+removeDFiles()
 
 print("Done!")
