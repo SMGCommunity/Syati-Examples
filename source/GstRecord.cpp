@@ -215,7 +215,7 @@ namespace gst {
     }
 
     void GhostLuigiRecordHelper::handlePrepare() {
-        MarioAccess::setBaseMtx(*getBaseMtx());
+        MarioAccess::setBaseMtx(getBaseMtx());
         MarioAccess::setStateWait();
         MR::startBckPlayer("Wait", NULL);
         MR::hideModel(this);
